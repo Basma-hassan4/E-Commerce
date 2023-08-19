@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-Commerce</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Fonts Aw icon -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- arrange the elements naturally and tidy on the page -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.css">
+
+    </head>
+    <body>
+            <!-- -------------------Start Navbar Section -->
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa-solid fa-cart-flatbed ml-3"><span>Sh</span></i>
+                    </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Categores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Products</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Pages
+                                </a>
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Service</a>
+                                <a class="dropdown-item" href="#">Latest Products</a>
+                                <a class="dropdown-item" href="#">Customer Reviews</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Sign Up</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="text" placeholder="Search">
+                                <button class="btn btn-primary ml-2 " type="button">Search</button>
+                            </form>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary ml-2 mr-3" data-toggle="modal" data-target="#exampleModal">
+                                Log in
+                            </button>
+
+                         <!-------------------------------------------------Start cart section  -->
+                            <!-- <div class="shop text-primary mr-5">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="value text-light">0</span>
+                            </div>
+                
+                            <div class="cart">
+                                <h3>My Products</h3>
+                                <ul id="my-all">
+                                </ul>
+                                <div class="check">
+                                    <div id="initialvalue">0</div>
+                                    <div class="close">Close</div>
+                            </div>
+                            </div> -->
+                        </div>
+                            </div>
+                            </div>
+                            
+                </div>
+              </nav>       
+            <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="mb-3 mt-3">
+                              <label for="email" class="form-label text-primary">Email:</label>
+                              <input type="text" class="form-control" id="uname" placeholder="Enter email" name="uname" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="pwd" class="form-label text-primary">Password:</label>
+                              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                            </div>
+                            <label class="switch">
+                                 <input type="checkbox" checked="checked" name="remember"> 
+                                <span class="slider round"></span>
+                            </label>Remember me
+                          </form> 
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" style="margin-right: 320px;">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                </div>
+            </div>    
+            <!-- Start Scocial Media icons section -->
+            <div class="icons">
+                <!-- 1 -->
+                <div class="icon facebook">
+                    <div class="tool">Facebook</div>
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                </div>
+                <!-- 2 -->
+                <div class="icon instagram">
+                    <div class="tool">Instagram</div>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                </div>
+                <!-- 3 -->
+                <div class="icon twitter">
+                    <div class="tool">Twitter</div>
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                </div> 
+                <!-- 4 -->
+                <div class="icon whatsapp">
+                    <div class="tool">Whatsapp</div>
+                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                </div> 
+            </div>
+            <!-- End Scocial Media icons section -->
+
+            <!-- ----------------------End Navbar Section----------------------------- -->
+            <!-- -----Start Home Section -->
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+                    <li data-target="#myCarousel" data-slide-to="1" ></li>
+                    <li data-target="#myCarousel" data-slide-to="2" ></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="overlay-image" style="background-image:url(Image/online-fashion-shopping-with-laptop.jpg);"></div>
+                        <div class="container">
+                            <h1>Online Shopping</h1>
+                        <p>BUY AND SELL ONLINE, SHOPPING ONLINE FROM HOME..</p>
+                        <a href="#" class="btn btn-lg btn-primary">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+        
+                    <div class="carousel-item ">
+                        <div class="overlay-image" style="background-image:url(Image/person-adding-clothes-cart-closeup-online-shopping-campaign.jpg);"></div>
+                        <div class="container">
+                            <h1>Online Shopping</h1>
+                        <p>BUY AND SELL ONLINE, SHOPPING ONLINE FROM HOME..</p>
+                        <a href="#" class="btn btn-lg btn-primary">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="overlay-image" style="background-image:url(Image/female_shopping_from_phone.jpg);"></div> 
+                        <div class="container">
+                            <h1>Online Shopping</h1>
+                        <p>BUY AND SELL ONLINE, SHOPPING ONLINE FROM HOME..</p>
+                        <a href="#" class="btn btn-lg btn-primary">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                    <span class="sr-only">Next</span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+
+                <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                    <span class="sr-only">Previous</span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- -----End Home Section -->
+            
+                <!-- ---Start About section -->
+            <div class="about">
+                <div class="cont">
+                    <div class=" text-center mt-5 mb-5 position-relative">
+                        <h2>About Us</h2>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-4 mb-4 ml-5 text-md-start d-flex justify-content-center align-items-center">
+                        <div class="text">
+                            <h4 class="text-primary text-uppercase">Just For You</h4>
+                            <p class="text-black-50 fs-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quas magnam dolore, quod laudantium minima iure obcaecati aliquid inventore, aperiam asperiores a reprehenderit eos recusandae? Magni incidunt labore dolorum maxime, maiores iure architecto voluptas consequuntur vel adipisci quis sunt accusamus nesciunt modi quod pariatur enim eum dolore ab sequi atque.
+                            </p>
+                            <button type="button" class="btn btn-outline-primary text-uppercase">get start</button>
+                        </div>
+                    </div>
+                        <div class="col-lg-6">
+                            <div class="image ml-5">
+                                <img class="img-thumbnail" src="Image/Big_phone_with_cart.jpg" alt="" height="380px" width="380px" />
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!-- ---End About section -->
+
+            <!-- Start categores section------------ -->
+            <div class="categores">
+                <div class="cont" style="background-color: rgb(226, 228, 231); height: 60px;">
+                    <div class=" text-center mt-5 mb-5 position-relative">
+                        <h2>Categores</h2>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <button class="accordion mt-5">Fashion</button>
+                <div class="panel">
+                <p>Fashion is a form of self-expression with a specific context, such as time, place and purpose. Example of وcontain clothes for, Women, men, girls, boys, baby, luggage and also includes innovative travel equipment and special uses Accessories, shoes, jewelry and watches ,Traditional and cultural clothing Uniforms, work and safety, Specialized sportswear.</p>
+                </div>
+    
+                <button class="accordion">Super Market</button>
+                <div class="panel">
+                <p>It includes sections of: Beauty and personal care,Health, family and child care, groceries (vegetables, fruits and proteins) and fine dining.</p>
+                </div>
+                <button class="accordion">Electronics</button>
+                <div class="panel">
+                <p>Origin includes all kinds of devices: mobile phones and accessories,Computers and its accessories, televisionsLaptops, cameras and accessories, headphones,Amplifiers.</p>
+                </div>  
+            </div>
+            <!-- End categores section------------ -->
+
+            <!-- ---------Start fixed Image1 -->
+            <div class="bg1">
+            </div>
+            <!-- ---------End fixed Image1 -->
+            
+            <!-- ---------------------Start Products Section------ -->
+            <div class="our-work text-center pt-5 pb-5">
+                <div class="cont">
+                    <div class=" text-center mt-5 mb-5 position-relative">
+                        <h2>Products</h2>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                  <ul class="list-unstyled d-flex justify-content-center mt-5 mb-5">
+                    <li class="active">All </li>
+                    <li>Clothes</li>
+                    <li>Shoes</li>
+                    <li>Electronics</li>
+                    <li>Vegetable</li>
+                    <li>Fruit</li>
+                  </ul>
+                <section class=" shopp " >
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-product ">
+                        <div class="col mb-3 product" price="150">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/dark-glass-bottle-with-single-liquid-drop-generative-ai.jpg" alt="dessert image" height="300px" >
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold" style="font-size: 25px;">Perfume</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold" style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$200</s></small>$250</p>
+                                    <button class="btn btn-primary add-item ">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ---------------------------------------- -->
+                        <div class="col mb-3 product" price="200">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/elegant-watch-with-silver-golden-chain-isolated.jpg" alt="dessert image" height="300px">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold " style="font-size: 25px;">Watch</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$500</s></small>$350</p>
+                                    <button class="btn btn-primary add-item">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------------------------------------------------------------------- -->
+                        <div class="col mb-3 product" price="100">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/graphic-tshirt-trendy-design-mockup-presented-wooden-hanger-with-sapce-your-test.jpg" alt="dessert image" height="300px">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold " style="font-size: 25px;">T-shirt</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold" style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$200</s></small>$400</p>
+                                    <button class="btn btn-primary add-item">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ------------------------------------------------------------------ -->
+                        <div class="col mb-3 product" price="400">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/levitating-music-headphones-display.jpg" alt="dessert image" height="300px">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold " style="font-size: 25px;">Sony E7 Headphone</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold" style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$250</s></small>$150</p>
+                                    <button class="btn btn-primary add-item">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ------------------------------------------------------------------ -->
+                        <div class="col mb-3 product" price="250">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/wireless-home-security-surveillance-camera.jpg" alt="dessert image" height="300px">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold " style="font-size: 25px;">Tabo C200 Wi-Fi</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold" style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$1,197.00</s></small> $999</p>
+                                    <button class="btn btn-primary add-item">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ---------------------------------------------------- -->
+                        <div class="col mb-3 product" price="280">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/wooden-board-full-juicy-slices-orange-fruit-stone-table.jpg" alt="dessert image" height="300px">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold " style="font-size: 25px;">Fresh Orange</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold" style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$20</s></small> $15</p>
+                                    <button class="btn btn-primary add-item">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ---------------------------------------------- -->
+                        <div class="col mb-3 product" price="50">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/OF18G80.jpg" alt="dessert image" height="300px">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold " style="font-size: 25px;">Fresh Tomato</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold" style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$11</s></small>$8.99</p>
+                                    <button class="btn btn-primary add-item">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -------------------------------------------------- -->
+                        <div class="col mb-3 product" price="500">
+                            <div class="card"  style="width: 18rem;">
+                                <img class="rounded " src="Image/P6YT9A0.jpg" alt="dessert image" height="300px">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title d-flex justify-content-center  fw-bold " style="font-size: 25px;">Mobile Galaxy A04</h5>
+                                    <div class="star mb-2 ">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <p  class="card-text d-flex justify-content-center  fw-bold "style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur.</p> 
+                                    <p  class="card-text d-flex justify-content-center  fw-bold" style="font-size: 18px; font-weight: 600;"><small class="mt-1 mr-1"><s>$5,639.00</s></small> $3,699</p>
+                                    <button class="btn btn-primary add-item">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------------------------------------------------- -->
+                    </div>
+                </section>  
+                <!-- <a href="#" class="btn btn-lg btn-primary mt-5" style="border-radius: 20px;">I WANT MORE <i class="fa-solid fa-arrow-right"></i></a> -->
+            </div>
+
+            <!-- ---------------------End Products Section------ -->
+            <!-- ---------Start fixed Image1 -->
+                <div class="bg2">
+                </div>
+                <!-- ---------End fixed Image1 -->
+
+                <!-- ---Start Service Section -->
+                <section>
+                    <div class="cont">
+                        <div class=" text-center mt-5 mb-5 position-relative">
+                            <h2>Our Services</h2>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="column">
+                        <div class="Card">
+                          <div class="icon-wrapper">
+                            <i class="fas fa-hammer"></i>
+                          </div>
+                          <h3>Safe Deliveries</h3>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                            consequatur necessitatibus eaque.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="Card">
+                          <div class="icon-wrapper">
+                            <i class="fas fa-brush"></i>
+                          </div>
+                          <h3>Competitive Prices</h3>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                            consequatur necessitatibus eaque.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="Card">
+                          <div class="icon-wrapper">
+                            <i class="fas fa-wrench"></i>
+                          </div>
+                          <h3>Ease of Return</h3>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                            consequatur necessitatibus eaque.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="Card">
+                          <div class="icon-wrapper">
+                            <i class="fas fa-truck-pickup"></i>
+                          </div>
+                          <h3>Products Selection</h3>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                            consequatur necessitatibus eaque.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="Card">
+                          <div class="icon-wrapper">
+                            <i class="fas fa-broom"></i>
+                          </div>
+                          <h3>Faster Deliveries</h3>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                            consequatur necessitatibus eaque.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="Card">
+                          <div class="icon-wrapper">
+                            <i class="fas fa-plug"></i>
+                          </div>
+                          <h3>Products Information</h3>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                            consequatur necessitatibus eaque.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                <!-- ---End Service Section -->
+
+                <!--------------------Start last Product section  -->
+                <section class="last">
+                    <div class="cont">
+                        <div class=" text-center mt-5 mb-5 position-relative">
+                            <h2>Last Product</h2>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="conteent">
+                            <h3>Airmax</h3>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>		
+                            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus saepe autem.</p>
+                            <button type="button" class="btn btn-outline-primary text-uppercase">Buy Now</button>
+                            <button type="button" class="btn btn-primary text-uppercase">Add To Cart</button>
+                        </div>
+                        <div class="imaag">
+                            <img src="Image/sports-shoe-illustration-men-fashion-generated-by-ai.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="row1">
+                        <div class="imaag">
+                            <img src="Image/sports-shoe-illustration-men-fashion-generated-by-ai.jpg" alt="">
+                        </div>
+                        <div class="conteent">
+                            <h3>Airmax</h3>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>		
+                            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus saepe autem.</p>
+                            <button type="button" class="btn btn-outline-primary text-uppercase">Buy Now</button>
+                            <button type="button" class="btn btn-primary text-uppercase">Add To Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="conteent">
+                            <h3>Airmax</h3>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>		
+                            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus saepe autem.</p>
+                            <button type="button" class="btn btn-outline-primary text-uppercase">Buy Now</button>
+                            <button type="button" class="btn btn-primary text-uppercase">Add To Cart</button>
+                        </div>
+                        <div class="imaag">
+                            <img src="Image/sports-shoe-illustration-men-fashion-generated-by-ai.jpg" alt="">
+                        </div>
+                    </div>
+
+                </section>
+                <!--------------------End last Product section  -->
+
+
+
+
+                <!-- ----Start customers reviews section------ -->
+                <div class="testimonial_area">
+                    <div class="cont">
+                        <div class=" text-center mt-5 mb-5 position-relative">
+                            <h2>Customer Reviews</h2>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="testmonial text-center">
+                    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-4  ">
+                        <div class="box-area">	
+                            <div class="img-area">
+                                <img src="Image/Person.jpg" alt="">
+                            </div>	
+                            <h5>Declan Weston</h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>								
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and 
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </h6>
+                        </div> 
+                    
+                        <div class="box-area">	
+                            <div class="img-area">
+                                <img src="Image/Person1.jpg" alt="">
+                            </div>	
+                            <h5>Emily Patrice</h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>									
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and 
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </h6>
+                        </div> 
+                    
+                        <div class="box-area">	
+                            <div class="img-area">
+                                <img src="Image/Person2.jpg" alt="">
+                            </div>	
+                            <h5>Kaiden Alex</h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>									
+                            <p class="content">
+                                Lorem Ipsum is simply dummy text of the printing and 
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+                                ever since
+                            </p>
+                            <h6 class="socials">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </h6>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- -----------------------End customer reviews section--- -->
+
+                <!------------------- Start contact us reviews -->
+                <section class="contact-us mt-5">
+                    <div class="Contain">
+                        <div class="Item">
+                            <div class="contact">
+                                <div class="text1">Let's get in touch</div>
+                                <img src="Image/Contact us-rafiki.svg" alt="">
+                                <div class="social-contact">
+                                    <span class="text2">Connect With Us:</span>
+                                    <ul class="social-media">
+                                        <i class="fa-brands fa-facebook"></i>
+                                        <i class="fa-brands fa-instagram"></i>
+                                        <i class="fa-brands fa-twitter"></i>
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </ul>
+                                </div>
+                                <button onclick="myFunction()" type="button" class="btn btn-primary ml-4" data-toggle="tooltip" data-placement="top" title="Contact Us">
+                                    Submit
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                      panel.style.maxHeight = null;
+                    } else {
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                  });
+                }
+                function myFunction() {
+                    alert("Hello! You are Welcom");
+
+                    }
+            </script>
+        <script src="js/script.js"></script>        
+        <script src="js/popper.min.js"></script>
+        <script src="js/jquery-3.7.0.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>
+
+
+
+
